@@ -106,7 +106,7 @@ define docker::run(
   Optional[Boolean] $use_name                           = false,
   Optional[Boolean] $running                            = true,
   Variant[String,Array,Undef] $volumes_from             = [],
-  Variant[String,Array] $net                            = 'bridge',
+  Variant[String,Array,Undef] $net                      = undef,
   Variant[String,Boolean] $username                     = false,
   Variant[String,Boolean] $hostname                     = false,
   Variant[String,Array,Undef] $env                      = [],

@@ -22,7 +22,7 @@ module Puppet::Parser::Functions
       flags << "--restart '#{opts['restart']}'"
     end
 
-    if opts['net'].is_a? String
+    if opts['net'] && opts['net'].is_a? String
       flags << "--net #{opts['net']}"
     end
 
